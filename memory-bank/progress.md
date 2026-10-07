@@ -39,3 +39,4 @@
 - Justificación de rendimiento: elegimos evaluar el dashboard para prevenir retrasos en la renderización y asegurar la fluidez de la interfaz. La revisión identificó la carga encadenada de fuentes como un posible retraso; se pasó a precargar/preconectar y cargar las fuentes sin bloquear el renderizado. La validación fue estática y no incluyó mediciones de navegador, por lo que no se atribuyen mejoras cuantitativas.
 - Creada e integrada la skill interna `.agents/skills/dashboard-quality-standards/SKILL.md`, con estándares de formato centralizado de moneda mediante `Intl.NumberFormat`, estructura de UI y tests de regresión.
 - Verificados el frontmatter y los criterios requeridos de la skill, los diagnósticos del editor y `git diff --check`. El dashboard aún no dispone de suite en `uis/backoffice/tests/`; la skill define su uso de `node --test uis/backoffice/tests/*.test.js` para futuras pruebas.
+
