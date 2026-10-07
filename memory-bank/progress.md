@@ -31,3 +31,10 @@
 - Verificadas ambas rutas con servidores estáticos: `website` en `http://127.0.0.1:4173/` y `backoffice` en `http://127.0.0.1:4174/`.
 - Verificados los enlaces locales, el patrón RegEx del teléfono y el formato con `git diff --check`.
 - `node --check` no pudo ejecutarse porque Node.js no está instalado; no se modificaron `CONTEXT.md`, `CONTEXT.es.md`, `.devcontainer/`, `.gitignore` ni configuraciones raíz.
+
+## Sesión 2026-10-07 (calidad del dashboard)
+
+- Completada la auditoría WCAG 2.2 AA del dashboard con la skill `wcag-accessibility-audit`; aplicadas mejoras de teclado, estados accesibles, semántica de tabla y contraste.
+- Completada la auditoría de rendimiento frontend con `vercel-react-best-practices`; optimizada la carga de fuentes y actualizados los metadatos del sitio y del dashboard. El frontend existente es HTML, CSS y JavaScript estático, por lo que las recomendaciones específicas de Next.js no aplican.
+- Creada e integrada la skill interna `.agents/skills/dashboard-quality-standards/SKILL.md`, con estándares de formato centralizado de moneda mediante `Intl.NumberFormat`, estructura de UI y tests de regresión.
+- Verificados el frontmatter y los criterios requeridos de la skill, los diagnósticos del editor y `git diff --check`. El dashboard aún no dispone de suite en `uis/backoffice/tests/`; la skill define su uso de `node --test uis/backoffice/tests/*.test.js` para futuras pruebas.
